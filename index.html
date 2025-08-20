@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Randic's Dungeon</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'prussian_blue': {
+                            DEFAULT: '#022f40',
+                            100: '#000a0d',
+                            200: '#01131a',
+                            300: '#011d27',
+                            400: '#022633',
+                            500: '#022f40',
+                            600: '#057096',
+                            700: '#07afec',
+                            800: '#53cdfa',
+                            900: '#a9e6fc'
+                        },
+                        'pacific_cyan': {
+                            DEFAULT: '#38aecc',
+                            100: '#0b2329',
+                            200: '#154653',
+                            300: '#206a7c',
+                            400: '#2b8da5',
+                            500: '#38aecc',
+                            600: '#60bed6',
+                            700: '#88cfe0',
+                            800: '#b0dfeb',
+                            900: '#d7eff5'
+                        },
+                        'blue_ncs': {
+                            DEFAULT: '#0090c1',
+                            100: '#001d27',
+                            200: '#003a4e',
+                            300: '#005774',
+                            400: '#00749b',
+                            500: '#0090c1',
+                            600: '#02c0ff',
+                            700: '#41d0ff',
+                            800: '#81dfff',
+                            900: '#c0efff'
+                        },
+                        'prussian_blue_dark': {
+                            DEFAULT: '#183446',
+                            100: '#050a0e',
+                            200: '#09141b',
+                            300: '#0e1f29',
+                            400: '#132937',
+                            500: '#183446',
+                            600: '#2d6283',
+                            700: '#4490bf',
+                            800: '#82b5d4',
+                            900: '#c1daea'
+                        },
+                        'cerulean': {
+                            DEFAULT: '#046e8f',
+                            100: '#01161d',
+                            200: '#012d3a',
+                            300: '#024357',
+                            400: '#035973',
+                            500: '#046e8f',
+                            600: '#06a6d7',
+                            700: '#2bc9fa',
+                            800: '#72dbfb',
+                            900: '#b8edfd'
+                        }
+                    },
+                    fontFamily: {
+                        'retro': ['"Press Start 2P"', 'monospace'],
+                        'console': ['"Courier New"', 'monospace']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @keyframes glow {
+            0% {
+                text-shadow: 0 0 10px currentColor;
+            }
+
+            50% {
+                text-shadow: 0 0 20px currentColor, 0 0 30px currentColor;
+            }
+
+            100% {
+                text-shadow: 0 0 10px currentColor;
+            }
+        }
+
+        .glow-text {
+            animation: glow 2s ease-in-out infinite;
+        }
+
+        body {
+            background: linear-gradient(to bottom, #000a0d, #01131a, #011d27);
+        }
+    </style>
+</head>
+
+<body class="min-h-screen flex flex-col items-center justify-center p-4">
+    <!-- Main Container -->
+    <div class="w-full max-w-6xl mx-auto text-center">
+
+        <!-- Title -->
+        <h1 class="font-retro text-2xl md:text-4xl text-pacific_cyan-600 mb-8 glow-text tracking-wider">
+            The Randic's Dungeon
+        </h1>
+
+        <!-- Participants Section -->
+        <div class="mb-8">
+            <h2 class="font-console text-cerulean-600 text-xl mb-4 uppercase tracking-wide">
+                [ Brave Adventurers ]
+            </h2>
+            <div class="flex flex-wrap justify-center gap-4 md:gap-8">
+                <span class="font-console text-blue_ncs-700 text-sm md:text-base">» Marcus_Knight</span>
+                <span class="font-console text-pacific_cyan-700 text-sm md:text-base">» Elena_Mage</span>
+                <span class="font-console text-cerulean-700 text-sm md:text-base">» Thor_Warrior</span>
+                <span class="font-console text-prussian_blue-700 text-sm md:text-base">» Luna_Archer</span>
+                <span class="font-console text-blue_ncs-600 text-sm md:text-base">» Zed_Rogue</span>
+            </div>
+        </div>
+
+        <!-- Game Container -->
+        <div class="relative inline-block border-4 border-cerulean-600 rounded-lg overflow-hidden shadow-2xl">
+            <div
+                class="absolute inset-0 bg-gradient-to-br from-prussian_blue-600/20 to-transparent pointer-events-none">
+            </div>
+
+            <!-- Iframe -->
+
+            
+            <iframe title="dungeon" frameborder="0" width="800" height="400"
+                src="https://view.genially.com/68a0d7fbdf9c2e0e858b6197" type="text/html"
+                allowscriptaccess="always" allowfullscreen="true" scrolling="yes"
+                allownetworking="all"></iframe>
+
+
+            <iframe src="https://view.genially.com/68a0d7fbdf9c2e0e858b6197/interactive-content-dungeon" width="800"
+                height="600" class="block max-w-full" style="border: 2px solid #046e8f; visibility:hidden; position:absolute; left:-9999px;"
+                title="The Randic's Dungeon Game">
+            </iframe>
+        </div>
+
+        <!-- Footer Text -->
+        <p class="font-console text-prussian_blue-700 text-xs mt-6 opacity-80">
+            Press START to begin your quest...
+        </p>
+    </div>
+
+    <!-- Decorative Elements -->
+    <div
+        class="fixed top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-pacific_cyan-600 to-transparent opacity-50">
+    </div>
+    <div
+        class="fixed bottom-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-cerulean-600 to-transparent opacity-50">
+    </div>
+</body>
+
+</html>
